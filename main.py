@@ -17,4 +17,13 @@ class Pessoa:
         self._idade = idade
 
     def __str__(self):
-        return f'Nome: {self.nome}, Idade: {self._idade}, CPF: {self.__cpf}'	
+        return f'Nome: {self.nome}, Idade: {self._idade}, CPF: {self.__cpf}'
+
+class Medico(Pessoa):
+    	def __init__(self, nome, cpf, idade, especialidade):
+            super().__init__(self, nome, cpf, idade)
+            self.especialidade = especialidade
+        
+            def __str__(self):
+                return f'Nome: {self.nome}, Idade: {self._idade}, CPF: {self.__cpf}, especialidade: {self.especialidade}'
+
