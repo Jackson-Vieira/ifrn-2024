@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  
+</head>
+<body>
+<nav>
+  <a id="siteName">
+    <h2>
+      <a href="{% url 'home' %}">Jackson Vieira</a>
+    </h2>
+  </a>
+  <ul class="navLinks">
+    <li class="navLink">
+      <a href="{% url 'home' %}">Home</a>
+    </li>
+    <li class="navLink">
+      <a href="{% url 'sobre' %}">
+        Sobre
+      </a>
+    </li>
+    <li><a href="{% url 'projetos' %}">Projetos</a></li>
+  </ul>
+</nav>
+  {% block content %} {% endblock %}
+</body>
+</html>

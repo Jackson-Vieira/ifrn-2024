@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Home{% endblock%}
+
+{% block content %}
+<main>
+  <h1>Home</h1>
+  <section id="me">
+    <h2>Eu</h2>
+    <img src="{% static 'public/eu.jpeg' %}" alt="Foto minha">
+    <p>👋 Ola, Me chamo <strong>
+      Jackson
+    </strong>, e seja bem vindo ao meu site.</p>
+    <p>✍️ Sou desenvolvedor Fullstack, atualmente atrabalhando com projetos Python e Django</p>
+    <a href="{% url "sobre" %}">
+      Mais detalhes
+    </a>
+  </section>
+</main>
+{% endblock %}
